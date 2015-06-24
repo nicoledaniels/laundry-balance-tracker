@@ -8,7 +8,7 @@
  * Controller of the laundrytrackerApp
  */
 angular.module('laundrytrackerApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ReportsCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
