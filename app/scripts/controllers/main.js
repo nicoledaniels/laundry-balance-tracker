@@ -9,9 +9,16 @@
  */
 angular.module('laundrytrackerApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.startingBalance = 17;
+    $scope.loads = 0;
+    $scope.addLoad = function() {
+    	$scope.loads++;
+    	console.log($scope.loads);
+    };
+    $scope.deleteLoad = function() {
+    	if($scope.loads > 0){
+    	$scope.loads--;
+    	console.log($scope.loads);
+    }
+    };
   });

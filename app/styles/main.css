@@ -55,6 +55,14 @@ html{
   padding-bottom: 19px;
 }
 
+.sufficientFunds {
+  color: green;
+}
+
+.insufficientFunds{
+  color: red;
+}
+
 /* Custom page footer 
 .footer {
   padding-top: 19px;

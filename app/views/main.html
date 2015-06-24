@@ -3,19 +3,19 @@
     <h2>Remaining Balance</h1>
   </div>
   <div class="row price">
-    <h1>$15.00</h2>
+    <h1 ng-model="startingBalance">{{startingBalance | currency}}</h2>
   </div>
   <div class="row well">
     <p>How many loads? <i>(Washing and Drying)</p>
       <div class="input-group prompt">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-number">
+              <button type="button" class="btn btn-danger btn-number" ng-click="deleteLoad()">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
+          <input type="text" class="form-control input-number" value="{{loads}}">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-success btn-number">
+              <button type="button" class="btn btn-success btn-number" ng-click="addLoad()">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
