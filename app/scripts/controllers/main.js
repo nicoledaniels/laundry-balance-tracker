@@ -27,10 +27,8 @@ angular.module('laundrytrackerApp')
     			$scope.lowFunds = true;
     			if ($scope.balance <= 0) {
     			$scope.balance = 0;
-    			$scope.noFunds = true;
-    	};
     	}
-    	
+    	}
     }, true);
     
     $scope.deleteLoad = function() {
