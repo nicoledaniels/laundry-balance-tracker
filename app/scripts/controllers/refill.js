@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name laundrytrackerApp.controller:ReportsCtrl
+ * @name laundrytrackerApp.controller:RefillCtrl
  * @description
- * # ReportsCtrl
+ * # RefillCtrl
  * Controller of the laundrytrackerApp
  */
 angular.module('laundrytrackerApp')
-  .controller('ReportsCtrl', function ($scope) {
+  .controller('RefillCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

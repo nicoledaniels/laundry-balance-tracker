@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/reports.html',
         controller: 'ReportsCtrl'
       })
+      .when('/refill', {
+        templateUrl: 'views/refill.html',
+        controller: 'RefillCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
