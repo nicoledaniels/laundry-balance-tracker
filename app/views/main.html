@@ -7,18 +7,24 @@
   </div>
   <div class="row well">
     <p>How many loads? <i>(Washing and Drying)</p>
-      <div class="input-group prompt">
+      <div class="input-group prompt row">
           <span class="input-group-btn">
               <button type="button" class="btn btn-danger btn-number" ng-click="deleteLoad()">
                 <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
           <input type="text" class="form-control input-number" value="{{loads}}">
-          <span class="input-group-btn">
+          <span class="input-group-btn"> 
               <button type="button" class="btn btn-success btn-number" ng-click="addLoad()">
                   <span class="glyphicon glyphicon-plus"></span>
               </button>
           </span>
       </div>
+     <div class="row saveButton">
+        <button ladda="loading" ng-click="saveData()" data-style="expand-right" data-spinner-color="#FFFFFF" data-spinner-size="30" >
+          Save
+        </button>
+      </div>
   </div>
+   
 </div>
