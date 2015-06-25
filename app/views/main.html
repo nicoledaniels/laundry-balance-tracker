@@ -3,7 +3,7 @@
     <h2>Remaining Balance</h1>
   </div>
   <div class="row price">
-    <h1 ng-model="startingBalance">{{startingBalance | currency}}</h2>
+    <h1 ng-model="startingBalance" ng-class="{insufficientFunds: lowFunds === true }">{{balance | currency}}</h2>
   </div>
   <div class="row well">
     <p>How many loads? <i>(Washing and Drying)</p>

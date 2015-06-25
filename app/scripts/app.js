@@ -16,8 +16,12 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angular-ladda'
+    'angular-ladda',
+    'LocalStorageModule'
   ])
+  .config(['localStorageServiceProvider',function(localStorageServiceProvider) {
+    localStorageServiceProvider.setPrefix('ls');  
+  }])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
