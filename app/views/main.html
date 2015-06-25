@@ -5,6 +5,9 @@
   <div class="row price">
     <h1 ng-model="startingBalance" ng-class="{insufficientFunds: lowFunds === true }">{{balance | currency}}</h2>
   </div>
+  <div class="row">
+    <p ng-show="lowFunds && !noFunds"><i><b>Low balance. Please <a ng-href="#/refill">reload</a> card.</b></i></p>
+  </div>
   <div class="row well">
     <p>How many loads? <i>(Washing and Drying)</p>
       <div class="input-group prompt row">
