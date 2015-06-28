@@ -24,6 +24,10 @@ html {
   min-height: 100%;
 }
 
+button.btn.btn-default.dropdown-toggle{
+  margin-bottom: 20px;
+}
+
 .footer {
   position: absolute;
   

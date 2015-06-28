@@ -42,9 +42,15 @@ angular.module('laundrytrackerApp')
     	$scope.loading = true; // start loading
     	$timeout(function () {
     		$scope.loading = false; // stop loading
-    		$scope.balance -= $scope.loads * 1.50;
+    		$scope.expense = $scope.loads * 1.50;
+    		$scope.balance -= $scope.expense;
     		$scope.loads= 0;
     	}, 500);
+	};
+
+	$scope.storeUser = function(currUser) {
+		$scope.user = currUser;
+		console.log($scope.user);
 	};
 
 

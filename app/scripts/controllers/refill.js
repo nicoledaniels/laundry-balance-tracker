@@ -15,7 +15,7 @@ angular.module('laundrytrackerApp')
     $scope.addCash = function() {
     	$scope.balance += $scope.depositAmount;
     	$location.path('#/');
-	};
+		};
 
     $scope.$watch('balance', function () {
     	localStorageService.set('balance',$scope.balance);

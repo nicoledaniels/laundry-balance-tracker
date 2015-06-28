@@ -8,7 +8,18 @@
   <div class="row">
     <p ng-show="lowFunds"><i><b>Low balance. Please <a ng-href="#/refill">reload</a> card.</b></i></p>
   </div>
-  <div class="row well">
+  <div class="row well" ng-model="laundryInfo">
+    <!-- Single button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{user || 'Who Are You?'}} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li ng-click="storeUser('Courtney')">Courtney</li>
+        <li ng-click="storeUser('Nicole')">Nicole</li>
+        <li ng-click="storeUser('Shelley')">Shelley</li>
+      </ul>
+    </div>
     <p>How many loads? <i>(Washing and Drying)</p>
       <div class="input-group prompt row">
           <span class="input-group-btn">
@@ -27,7 +38,6 @@
         <button ladda="loading" ng-click="saveData()" data-style="expand-right" data-spinner-color="#FFFFFF" data-spinner-size="30" >
           Save
         </button>
-      </div>
+     </div>
   </div>
-   
 </div>
