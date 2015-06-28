@@ -10,13 +10,14 @@
 angular.module('laundrytrackerApp')
   .controller('MainCtrl', function ($scope, $timeout, localStorageService) {
     
-    localStorageService.clearAll();
+    //localStorageService.clearAll();
 
   	var laundryBalance = localStorageService.get('balance');
 
-    $scope.balance = laundryBalance || 17;
+    $scope.balance = laundryBalance || 0;
     
     $scope.loads = 0;
+    
     $scope.addLoad = function() {
     	$scope.loads++;
     };
