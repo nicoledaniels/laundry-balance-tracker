@@ -8,9 +8,11 @@
  * Controller of the laundrytrackerApp
  */
 angular.module('laundrytrackerApp')
-  .controller('MainCtrl', function ($scope, $timeout, localStorageService) {
+  .controller('MainCtrl', function ($scope, $timeout, localStorageService, $firebaseArray) {
     
     //localStorageService.clearAll();
+    var ref = new Firebase("https://laundrytracker.firebaseio.com/");
+    $scope.laundryData= $firebaseArray(ref);
 
   	var laundryBalance = localStorageService.get('balance');
 
@@ -44,6 +46,7 @@ angular.module('laundrytrackerApp')
     		$scope.loading = false; // stop loading
     		$scope.expense = $scope.loads * 1.50;
     		$scope.balance -= $scope.expense;
+    		$scope.laundryData.$add({ user: $scope.user, balance: $scope.balance, date: moment().format('MMMM Do YYYY, h:mm:ss a'), loads: $scope.loads, cost: $scope.expense});
     		$scope.loads= 0;
     	}, 500);
 	};

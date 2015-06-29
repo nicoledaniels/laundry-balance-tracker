@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'angular-ladda',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'firebase',
+    'ngTable'
   ])
   .config(['localStorageServiceProvider',function(localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');  

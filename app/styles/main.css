@@ -19,6 +19,10 @@ body {
   padding-right: 15px;
 }
 
+.ng-table {
+  border: 1px solid #000;
+}
+
 html {
   position: relative;
   min-height: 100%;

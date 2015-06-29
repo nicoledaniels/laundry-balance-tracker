@@ -2,4 +2,14 @@
   <div class="row header">
     <h2>Spending Reports</h1>
   </div>
+  <table ng-table class="table">
+                <tr ng-repeat="laundry in laundryData">
+                    <td data-title="'Date'">{{laundry.date}}</td>
+                    <td data-title="'User'">{{laundry.user}}</td>
+                    <td data-title="'Loads'">{{laundry.loads || '-'}}</td>
+                    <td data-title="'Refill'">{{(laundry.refill | currency) || '-'}}</td>
+                    <td data-title="'Cost'">{{(laundry.cost | currency) || '-'}}</td>
+                    <td data-title="'Balance'">{{(laundry.balance | currency) || '-'}}</td>
+                </tr>
+  </table>
 </div>

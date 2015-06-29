@@ -2,6 +2,16 @@
   <div class="row header">
     <h2>How Much Did You Put on the Card?</h1>
   </div>
+  <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{user || 'Who Are You?'}} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li ng-click="storeUser('Courtney')">Courtney</li>
+        <li ng-click="storeUser('Nicole')">Nicole</li>
+        <li ng-click="storeUser('Shelley')">Shelley</li>
+      </ul>
+    </div>
   <form class="form-inline">
   <div class="form-group">
     <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
