@@ -13,8 +13,10 @@ angular.module('laundrytrackerApp')
     var ref = new Firebase("https://laundrytracker.firebaseio.com/");
     $scope.laundryData= $firebaseArray(ref);
 
-	var laundryBalance = localStorageService.get('balance');
-    $scope.balance = laundryBalance || 0;
+    ref.on("child_added", function(snapshot, prevChildKey) {
+  		var newLaundry = snapshot.val();
+  		$scope.balance = newLaundry.balance;
+	});
      
     $scope.addCash = function() {
     	$scope.loading = true;
@@ -30,9 +32,4 @@ angular.module('laundrytrackerApp')
 		$scope.user = currUser;
 		console.log($scope.user);
 	};
-
-    $scope.$watch('balance', function () {
-    	localStorageService.set('balance',$scope.balance);
-    	$scope.laundryData.$add({balance: $scope.balance});
-    }, true);
-  });
+ });

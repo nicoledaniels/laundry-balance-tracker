@@ -14,9 +14,10 @@ angular.module('laundrytrackerApp')
     var ref = new Firebase("https://laundrytracker.firebaseio.com/");
     $scope.laundryData= $firebaseArray(ref);
 
-  	var laundryBalance = localStorageService.get('balance');
-
-    $scope.balance = laundryBalance || 0;
+    ref.on("child_added", function(snapshot) {
+  		var newLaundry = snapshot.val();
+  		$scope.balance = newLaundry.balance;
+	});
     
     $scope.loads = 0;
     
@@ -25,7 +26,6 @@ angular.module('laundrytrackerApp')
     };
 
     $scope.$watch('balance', function () {
-    	localStorageService.set('balance',$scope.balance);
     	if ($scope.balance <= 5){
     			$scope.lowFunds = true;
     			if ($scope.balance <= 0) {
