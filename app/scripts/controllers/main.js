@@ -14,6 +14,8 @@ angular.module('laundrytrackerApp')
     var ref = new Firebase("https://laundrytracker.firebaseio.com/");
     $scope.laundryData= $firebaseArray(ref);
 
+    $scope.user = null;
+
     ref.on("child_added", function(snapshot) {
   		var newLaundry = snapshot.val();
   		$scope.balance = newLaundry.balance;

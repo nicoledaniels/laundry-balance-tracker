@@ -35,7 +35,7 @@
           </span>
       </div>
      <div class="row saveButton">
-        <button ladda="loading" ng-click="saveData()" data-style="expand-right" data-spinner-color="#FFFFFF" data-spinner-size="30" >
+        <button ladda="loading" ng-click="saveData()" data-style="expand-right" data-spinner-color="#FFFFFF" data-spinner-size="30" ng-disabled="user === null || loads < 1">
           Save
         </button>
      </div>
