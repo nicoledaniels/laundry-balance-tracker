@@ -2,7 +2,7 @@
   <div class="row header">
     <h2>Spending Reports</h1>
   </div>
-  <table ng-table="tableParams" class="table">
+  <table ng-table class="table">
                 <tr ng-repeat="laundry in laundryData | orderBy:'-$id'">
                     <td data-title="'Date'">{{laundry.date}}</td>
                     <td data-title="'User'">{{laundry.user}}</td>

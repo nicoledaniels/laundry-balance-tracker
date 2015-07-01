@@ -8,8 +8,7 @@
  * Controller of the laundrytrackerApp
  */
 angular.module('laundrytrackerApp')
-  .controller('ReportsCtrl', function ($scope, $firebaseArray, ngTableParams) {
+  .controller('ReportsCtrl', function ($scope, $firebaseArray) {
     var ref = new Firebase("https://laundrytracker.firebaseio.com/");
     $scope.laundryData= $firebaseArray(ref);
-	});
   });
